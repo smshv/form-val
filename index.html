@@ -40,7 +40,7 @@
                 <div class="form-item">
                     <label for="pass">Password</label>
                     <div class="form-entry">
-                        <input type="password" name="password" id="password" minlength="8" pattern=".[0-9][!#$%^&*]" required>
+                        <input type="password" name="password" id="password" minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&]).+" required>
                         <p class="error"></p>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                 </div>
             </form>
             <div class="button-container">
-                <button>Submit</button>
+                <button form="user-data">Submit</button>
             </div>
         </div>
     </body>

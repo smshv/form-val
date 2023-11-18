@@ -10,11 +10,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Roboto', sans-serif;
 }
 
 .form-container{
     height: 600px;
-    width: 800px;
+    width: 820px;
     border-radius: 24px;
     background-color: rgb(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
@@ -25,28 +26,65 @@ body{
 }
 
 form#user-data{
-    width: 90%;
+    width: 95%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 20px;
-    grid-row-gap:20px;
+    grid-row-gap:30px;
 }
 .form-item{
     background-color: rgb(255, 255, 255, 0.4);
     display: grid;
-    grid-template-columns: 130px 1fr;
+    grid-template-columns: 140px 1fr;
     grid-column-gap:20px;
+    border-radius: 6px;
 }
 label{
     padding-left: auto;
     justify-self: center;
+    align-self: center;
+    color: #475569;
 }
 .form-entry{
-    justify-self: stretch;   
+    justify-self: stretch;
+    height: 25px;   
 }
-.form-entry>*{
+.form-entry>input{
     width: 100%;
+    height: 100%;
+    appearance: none;
+    border-radius: 6px;
+    border: 2px solid #94a3b8;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.form-entry>input:focus{
+    outline: none;
+    border: 2px solid #334155;
 }
 .button-container{
-    margin-top: 20px;
+    margin-top: 80px;
+}
+.button-container button{
+    width: 100px;
+    height: 40px;
+    color: white;
+    background-color: #475569;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.0rem;
+    border-radius: 4px;
+}
+.button-container button:hover{
+    font-weight: 600;
+}
+.error{
+    color: white;
+    padding: 4px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+}
+.error.invalid{
+    background-color: #f87171;
 }
